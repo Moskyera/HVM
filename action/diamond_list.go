@@ -12,7 +12,7 @@ const (
 )
 
 func diamondCharValid(b byte) bool {
-	return bytes.ContainsByte([]byte(diamondValidChars), b)
+	return bytes.Contains([]byte(diamondValidChars), []byte{b})
 }
 
 // parseDiamondNameList reads Uint1 count + concatenated 6-byte literals (DiamondNameListMax200 wire format).

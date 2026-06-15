@@ -5,7 +5,7 @@ import (
 )
 
 func TestParseDiamondNameList(t *testing.T) {
-	buf := []byte{0x02, 'W', 'T', 'Y', 'U', 'I', 'A', 'H', 'X', 'V', 'M', 'E'}
+	buf := []byte{0x02, 'W', 'T', 'Y', 'U', 'I', 'A', 'H', 'X', 'V', 'M', 'E', 'K'}
 	names, next, err := parseDiamondNameList(buf, 0)
 	if err != nil {
 		t.Fatal(err)

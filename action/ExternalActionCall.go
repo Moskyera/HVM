@@ -40,7 +40,7 @@ func (elm StaticExternalActionCall) Evaluate(ctx trait.Context) trait.EvalResult
 		return eval.ResultFatalErr(fmt.Errorf("ExternalAction VMKind %d error", evmk))
 	}
 	// evaluate
-	var resv, err = exec.Evaluate(elm.ExternalAction, ctx)
+	var resv, _, err = exec.Evaluate(elm.ExternalAction, ctx)
 	if err != nil {
 		return eval.ResultFatalErr(err) // error
 	}
@@ -91,7 +91,7 @@ func (elm DynamicExternalActionCall) Evaluate(ctx trait.Context) trait.EvalResul
 		return eval.ResultFatalErr(fmt.Errorf("Action build error: %s ", e))
 	}
 	// evaluate
-	var resv, err = ctx.GetExtendCallExecutor().Evaluate(actobj, ctx)
+	var resv, _, err = ctx.GetExtendCallExecutor().Evaluate(actobj, ctx)
 	if err != nil {
 		return eval.ResultFatalErr(err) // error
 	}
