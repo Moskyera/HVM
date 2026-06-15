@@ -1,7 +1,7 @@
 package trait
 
 // StakingFeeSharePercent is the HIP-25 fee redirect share (inscription + transfer fees).
-const StakingFeeSharePercent = 22
+const StakingFeeSharePercent = 13
 
 /**
  * HIP-25 staking hooks invoked from HVM external actions 0x01 / 0x02.
